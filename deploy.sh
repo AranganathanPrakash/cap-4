@@ -14,7 +14,7 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
     docker tag react-nginx ar8888/dev
 
     # Push the image to the Dev Docker Hub repository
-    docker push vennilavan/dev
+    docker push ar8888/dev
 
 elif [[ $GIT_BRANCH == "origin/main" ]]; then
     # Build your project
@@ -29,5 +29,5 @@ elif [[ $GIT_BRANCH == "origin/main" ]]; then
     docker tag react-nginx ar8888/prod 
 
     # Push the image to the Prod Docker Hub repository
-    docker push vennilavan/prod
+    docker push ar8888/prod
 fi
