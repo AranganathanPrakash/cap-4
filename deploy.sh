@@ -7,11 +7,11 @@ if [[ $GIT_BRANCH == "origin/dev" ]]; then
     sh'./build.sh'
 
     # Log in to Docker Hub (replace with your actual Docker Hub credentials)
-    docker login -u vennilavan -p dckr_pat_S24xwX_73dmdhHpTqKr-3UVNqds
+    docker login -u ar8888 -p $DOCKER_PASSWORD
 
   
     # Tag the image
-    docker tag react-nginx vennilavan/dev
+    docker tag react-nginx ar8888/dev
 
     # Push the image to the Dev Docker Hub repository
     docker push vennilavan/dev
@@ -22,11 +22,11 @@ elif [[ $GIT_BRANCH == "origin/main" ]]; then
     sh'./build.sh'
 
     # Log in to Docker Hub (replace with your actual Docker Hub credentials)
-    docker login -u vennilavan -p dckr_pat_S24xwX_73dmdhHpTqKr-3UVNqds
+    docker login -u ar8888 -p $DOCKER_PASSWORD
 
    
     # Tag the image
-    docker tag react-nginx vennilavan/prod 
+    docker tag react-nginx ar8888/prod 
 
     # Push the image to the Prod Docker Hub repository
     docker push vennilavan/prod
